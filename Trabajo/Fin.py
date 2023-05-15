@@ -42,9 +42,7 @@ def aux(x, x0, Ny, par, yx):
         sig = sig + np.zeros((Ny,1))
     else:
         sig = (sig + np.zeros((Ny,1))).transpose()
-    plt.imshow(sig)
-    plt.colorbar()
-    plt.show()
+
     alpha = par/dt - sig/2
     beta = par/dt + sig/2
 
@@ -68,7 +66,6 @@ s_0 = 0.2
 E_x = np.zeros(x_ex.shape)
 E_y = np.zeros(x_ey.shape)
 
-
 D_x = np.zeros(x_ex.shape)
 D_y = np.zeros(x_ey.shape)
 
@@ -82,8 +79,8 @@ d_ynew = np.zeros(x_ey.shape)
 
 #Condiciones de contorno
 
-E_x[:, 0] = E_x[:, -1] = 0 #pec
-E_y[0,:] = E_y[-1,:] = 0 #pec
+E_y[:, 0] = E_y[:, -1] = 0 #pec
+E_x[0,:] = E_x[-1,:] = 0 #pec
 
 level = np.linspace(-0.1, 0.6, 51)
 

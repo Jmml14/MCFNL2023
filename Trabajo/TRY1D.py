@@ -2,7 +2,7 @@ import numpy as np
 
 # PARÁMETROS DE LA SIMULACIÓN
 
-N = 150
+N = 101
 L = 10
 
 x_m = np.linspace(0, L, N) # grid primario (main)
@@ -60,7 +60,7 @@ CFL = 1.0 # condición CFL de estabilidad
 
 dt = CFL * dx / 1
 
-t_range = np.arange(0, 120*dt, dt)
+t_range = np.arange(0, 100*dt, dt)
 
 for t in t_range:
 
